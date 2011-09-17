@@ -1,19 +1,26 @@
-**Nothing here yet**
+**Xemplar is a NodeJS RegEx library**
 
 
 ## Installation
     
-To install APPNAME, use [npm](http://github.com/isaacs/npm):
+To install xemplar, use [npm](http://github.com/isaacs/npm):
 
-        $ npm install -g APPNAME
+        $ npm install -g xemplar
 
 ## Usage
 
-Nothing here yet
+```
+var patterns = require('xemplar');
+```
 
+## Pattern Libraries
+
+```
+None yet :(
+```
 ## Examples
 
-You can view further examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
+You can view further examples in the [example folder.](https://github.com/wearefractal/xemplar/tree/master/examples)
 
 ## Contributors
 

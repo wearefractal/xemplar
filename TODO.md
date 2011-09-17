@@ -2,8 +2,8 @@
 
 ### Minor
 
-  * Nothing here yet
+  * Set up easier way for community to submit patterns
 
 ### Major
 
-  * Nothing here yet
+  * Set up EXTENSIVE pattern testing
