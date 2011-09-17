@@ -1,4 +1,4 @@
-**Xemplar is a NodeJS RegEx library**
+**Xemplar is a NodeJS RegEx library full of useful patterns**
 
 
 ## Installation
@@ -16,13 +16,16 @@ var patterns = require('xemplar');
 ## Pattern Libraries
 
 ```
-None yet :(
+Look in ./lib/patterns
+A list will be made soon
 ```
 ## Examples
 
 You can view further examples in the [example folder.](https://github.com/wearefractal/xemplar/tree/master/examples)
 
 ## Contributors
+
+Do you have a RegEx pattern you think others might use? Send in a quick pull request and get added to this list!
 
 - [Contra](https://github.com/Contra)
 
