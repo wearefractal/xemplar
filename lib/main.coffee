@@ -1,4 +1,9 @@
 module.exports =
-  technology: require './patterns/technology.coffee'
-  security: require './patterns/security.coffee'
-  currency: require './patterns/currency.coffee'
+  general: require './patterns/general'
+  information: require './patterns/information'
+  time: require './patterns/time'
+  technology: require './patterns/technology'
+  security: require './patterns/security'
+  currency: require './patterns/currency'
+  programming: require './patterns/coding'
+  

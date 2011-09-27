@@ -1,7 +1,7 @@
 {
    "name":"xemplar",
    "description":"Xemplar is a NodeJS RegEx library",
-   "version":"0.0.2",
+   "version":"0.0.3",
    "homepage":"http://github.com/wearefractal/xemplar",
    "repository":"git://github.com/wearefractal/xemplar.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
