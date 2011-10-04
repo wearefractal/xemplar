@@ -1,3 +1,5 @@
+require('coffee-script');
+
 module.exports =
   general: require './patterns/general'
   information: require './patterns/information'
@@ -6,4 +8,4 @@ module.exports =
   security: require './patterns/security'
   currency: require './patterns/currency'
   programming: require './patterns/coding'
-  
+
