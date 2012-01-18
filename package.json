@@ -1,15 +1,14 @@
 {
    "name":"xemplar",
    "description":"Xemplar is a NodeJS RegEx library",
-   "version":"0.0.4",
+   "version":"0.0.5",
    "homepage":"http://github.com/wearefractal/xemplar",
    "repository":"git://github.com/wearefractal/xemplar.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "main":"./lib/main.coffee",
+   "main":"./lib/main.js",
 
    "dependencies":{
-      "coffee-script":"*",
-      "protege":"*"
+      "coffee-script":"*"
    },
    "engines":{
       "node":">= 0.4.0"
