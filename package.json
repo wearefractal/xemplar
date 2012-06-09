@@ -1,14 +1,22 @@
 {
    "name":"xemplar",
-   "description":"Xemplar is a NodeJS RegEx library",
-   "version":"0.0.5",
+   "description":"Community collection of RegEx patterns",
+   "version":"0.0.7",
    "homepage":"http://github.com/wearefractal/xemplar",
    "repository":"git://github.com/wearefractal/xemplar.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "main":"./lib/main.js",
-
+   "main":"./index.js",
+   
    "dependencies":{
-      "coffee-script":"*"
+      "coffee-script":"*",
+      "BetterRegExp":"*"
+   },
+   "devDependencies":{
+      "mocha":"*",
+      "should":"*"
+   },
+   "scripts":{
+      "test":"mocha --compilers coffee:coffee-script"
    },
    "engines":{
       "node":">= 0.4.0"
@@ -20,4 +28,3 @@
       }
    ]
 }
-

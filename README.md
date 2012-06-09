@@ -1,11 +1,20 @@
-**Xemplar is a NodeJS RegEx library full of useful patterns**
+![status](https://secure.travis-ci.org/wearefractal/xemplar.png?branch=master)
 
+## Information
 
-## Installation
-    
-To install xemplar, use [npm](http://github.com/isaacs/npm):
-
-        $ npm install -g xemplar
+<table>
+<tr> 
+<td>Package</td><td>xemplar</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Community collection of RegEx patterns</td>
+</tr>
+<tr>
+<td>Node Version</td>
+<td>>= 0.4</td>
+</tr>
+</table>
 
 ## Usage
 
@@ -13,27 +22,11 @@ To install xemplar, use [npm](http://github.com/isaacs/npm):
 var patterns = require('xemplar');
 ```
 
-## Pattern Libraries
-
-```
-Look in ./lib/patterns
-A list will be made soon
-```
-## Examples
-
-You can view further examples in the [example folder.](https://github.com/wearefractal/xemplar/tree/master/examples)
-
-## Contributors
-
-Do you have a RegEx pattern you think others might use? Send in a quick pull request and get added to this list!
-
-- [Contra](https://github.com/Contra)
-
 ## LICENSE
 
 (MIT License)
 
-Copyright (c) 2011 Fractal <contact@wearefractal.com>
+Copyright (c) 2012 Fractal <contact@wearefractal.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

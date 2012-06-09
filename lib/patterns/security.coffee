@@ -1,13 +1,14 @@
 module.exports =
-  xss: [/((\%3C)|<)((\%2F)|\/)*[a-z0-9\%]+((\%3E)|>)/i, # Simple XSS
-        /((\%3C)|<)((\%69)|i|(\%49))((\%6D)|m|(\%4D))((\%67)|g|(\%47))[^\n]+((\%3E)|>)/i, # IMG SRC XSS
-        /((\%3C)|<)[^\n]+((\%3E)|>)/i] # Super paranoid XSS (this will flag a lot)
+  xss: 
+    simple: /((\%3C)|<)((\%2F)|\/)*[a-z0-9\%]+((\%3E)|>)/i
+    img: /((\%3C)|<)((\%69)|i|(\%49))((\%6D)|m|(\%4D))((\%67)|g|(\%47))[^\n]+((\%3E)|>)/i
+    paranoid: /((\%3C)|<)[^\n]+((\%3E)|>)/i
   
-  lfi: [/\.\.\//i] # Basic LFI match
+  lfi: /\.\.\//i
   
-  sql: [/((\%3D)|(=))[^\n]*((\%27)|(\')|(\-\-)|(\%3B)|(;))/i, # SQL meta-characters
-        /\w*((\%27)|(\'))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/i, # Simple SQLi
-        /((\%27)|(\'))union/i, # SQLi with UNION
-        /exec(\s|\+)+(s|x)p\w+/i, # SQLi for MSSQL
-        /UNION(?:\s+ALL)?\s+SELECT/i] # SQLi UNION SELECT
-  
+  sql: 
+    meta: /((\%3D)|(=))[^\n]*((\%27)|(\')|(\-\-)|(\%3B)|(;))/i
+    simple: /\w*((\%27)|(\'))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/i
+    union: /((\%27)|(\'))union/i
+    mssql: /exec(\s|\+)+(s|x)p\w+/i
+    unionselect: /UNION(?:\s+ALL)?\s+SELECT/i
