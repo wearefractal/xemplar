@@ -17,17 +17,17 @@ patterns =
 
 getPostfixTest = (letters, postfix) ->
   test =
-    match:
+    test:
       shouldntMatch: ['i','','-']
       shouldMatch: []
   ex = ['-2.1','2','2.1','20.01','1056.21']
   letters ?= ("" for e in ex)
   for m in ex
     for letter in letters
-      test.match.shouldntMatch.push "#{m}"
-      test.match.shouldMatch.push "#{m}#{letter}#{postfix}"
-      test.match.shouldMatch.push "#{m} #{letter}#{postfix}"
-      test.match.shouldMatch.push "#{m}#{letter.toUpperCase()}#{postfix.toUpperCase()}"
+      test.test.shouldntMatch.push "#{m}"
+      test.test.shouldMatch.push "#{m}#{letter}#{postfix}"
+      test.test.shouldMatch.push "#{m} #{letter}#{postfix}"
+      test.test.shouldMatch.push "#{m}#{letter.toUpperCase()}#{postfix.toUpperCase()}"
   return test
 
 patterns.frequency.all.test = getPostfixTest "tgmk", "hz"

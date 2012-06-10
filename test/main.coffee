@@ -3,45 +3,57 @@ should = require 'should'
 require 'mocha'
 
 tests =
-  exec: (regex, {sample, expected, idx}) ->
-    throw "Missing sample" unless typeof sample is 'string'
-    throw "Missing expected" unless expected?
+  match: (regex, {sample, expected, idx}) ->
+    throw "Missing sample: #{regex}" unless typeof sample is 'string'
+    throw "Missing expected: #{regex}" unless expected?
     (done) ->
-      res = regex.exec sample
+      res = sample.match regex
       if res?
-        res = (match for match in res) if res?
         res = res[idx or 0] unless Array.isArray expected
         res.should.eql expected
       else
         expected.should.eql res
       done()
 
-  match: (regex, {shouldntMatch, shouldMatch}) ->
-    throw "Missing shouldntMatch" unless shouldntMatch?
-    throw "Missing shouldMatch" unless shouldMatch?
+  exec: (regex, {sample, expected, idx}) ->
+    throw "Missing sample: #{regex}" unless typeof sample is 'string'
+    throw "Missing expected: #{regex}" unless expected?
+    (done) ->
+      res = regex.exec sample
+      if res?
+        res = (match for match in res)
+        res = res[idx or 0] unless Array.isArray expected
+        res.should.eql expected
+      else
+        expected.should.eql res
+      done()
+
+  test: (regex, {shouldntMatch, shouldMatch}) ->
+    throw "Missing shouldntMatch: #{regex}" unless shouldntMatch?
+    throw "Missing shouldMatch: #{regex}" unless shouldMatch?
     (done) ->
       m.should.not.match regex for m in shouldntMatch
       m.should.match regex for m in shouldMatch
       done()
 
   split: (regex, {sample, expected}) ->
-    throw "Missing sample" unless typeof sample is 'string'
-    throw "Missing expected" unless expected?
+    throw "Missing sample: #{regex}" unless typeof sample is 'string'
+    throw "Missing expected: #{regex}" unless expected?
     (done) ->
       expected.should.eql sample.split regex
       done()
 
   replace: (regex, {sample, replaceWith, expected}) ->
-    throw "Missing sample" unless typeof sample is 'string'
-    throw "Missing replaceWith" unless typeof replaceWith is 'string'
-    throw "Missing expected" unless expected?
+    throw "Missing sample: #{regex}" unless typeof sample is 'string'
+    throw "Missing replaceWith: #{regex}" unless typeof replaceWith is 'string'
+    throw "Missing expected: #{regex}" unless expected?
     (done) ->
       expected.should.eql sample.replace regex, replaceWith
       done()
 
 runTest = (exp) -> ->
-  throw "Invalid RegExp" unless exp?
-  throw "Missing test" unless exp.test?
+  throw "Invalid RegExp: #{regex}" unless exp?
+  throw "Missing test: #{regex}" unless exp.test?
   it "should #{type} properly", tests[type] exp.clone(test.flags), test for type, test of exp.test
 
 findTests = (obj) -> ->
