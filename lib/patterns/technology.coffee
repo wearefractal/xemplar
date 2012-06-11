@@ -1,19 +1,19 @@
 patterns =
   frequency: 
-    all: /(-?\d*\.\d+|-?\d+)(?:\s?[tgmk]?hz)/i
-    thz: /(-?\d*\.\d+|-?\d+)(?:\s?thz)/i
-    ghz: /(-?\d*\.\d+|-?\d+)(?:\s?ghz)/i
-    mhz: /(-?\d*\.\d+|-?\d+)(?:\s?mhz)/i
-    khz: /(-?\d*\.\d+|-?\d+)(?:\s?khz)/i
-    hz: /(-?\d*\.\d+|-?\d+)(?:\s?hz)/i
+    all: /(-?\d*\.\d+|-?\d+)(?=(?:\s?[tgmk]?hz))/i
+    thz: /(-?\d*\.\d+|-?\d+)(?=(?:\s?thz))/i
+    ghz: /(-?\d*\.\d+|-?\d+)(?=(?:\s?ghz))/i
+    mhz: /(-?\d*\.\d+|-?\d+)(?=(?:\s?mhz))/i
+    khz: /(-?\d*\.\d+|-?\d+)(?=(?:\s?khz))/i
+    hz: /(-?\d*\.\d+|-?\d+)(?=(?:\s?hz))/i
 
   size:
-    all: /(-?\d*\.\d+|-?\d+)(?:\s?[tgmk]?b)/i
-    tb: /(-?\d*\.\d+|-?\d+)(?:\s?tb)/i
-    gb: /(-?\d*\.\d+|-?\d+)(?:\s?gb)/i
-    mb: /(-?\d*\.\d+|-?\d+)(?:\s?mb)/i
-    kb: /(-?\d*\.\d+|-?\d+)(?:\s?kb)/i
-    b: /(-?\d*\.\d+|-?\d+)(?:\s?b)/i
+    all: /(-?\d*\.\d+|-?\d+)(?=(?:\s?[tgmk]?b))/i
+    tb: /(-?\d*\.\d+|-?\d+)(?=(?:\s?tb))/i
+    gb: /(-?\d*\.\d+|-?\d+)(?=(?:\s?gb))/i
+    mb: /(-?\d*\.\d+|-?\d+)(?=(?:\s?mb))/i
+    kb: /(-?\d*\.\d+|-?\d+)(?=(?:\s?kb))/i
+    b: /(-?\d*\.\d+|-?\d+)(?=(?:\s?b))/i
 
 getPostfixTest = (letters, postfix) ->
   test =

@@ -10,9 +10,9 @@ patterns.month.test =
   match:
     flags: 'ig'
     sample: 'december bro January'
-    expected: ['december', 'January']
+    expected: ['december','January']
   test:
-    shouldntMatch: ['', 'decmber']
+    shouldntMatch: ['','decmber']
     shouldMatch: ["january","february","march","april","may","june",
     "july","august","september","october","november","december",
     "January","February","March","April","May","June","July",
