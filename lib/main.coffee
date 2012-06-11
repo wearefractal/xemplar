@@ -8,9 +8,9 @@ categories =
   technology: require './patterns/technology'
   security: require './patterns/security'
   currency: require './patterns/currency'
-  programming: require './patterns/coding'
+  code: require './patterns/code'
 
-ext = (obj) ->
+ext = (obj,prev) ->
   for k,v of obj
     if v instanceof RegExp
       obj[k] = BetterRegExp v
