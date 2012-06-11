@@ -1,10 +1,19 @@
 patterns =
+  cli: /(?=(?::|^)?)(\w+)(?:\[(.*?)\](?=(?::\w|$)))?/i
   comment:
     single: /(?:\/\/)(.+)/i
     block:/\/\*((?:.|[\n\r])+)\*\//i
   color: 
     hex: /(?:#)?([fFcC0369]{6})/i
     rgb: /(?:rgb\()([0-255]{0,3}(?:,)?){3}(?:\))/i
+
+patterns.cli.test =
+  exec:
+    sample: 'task["arg","arg2",true,false]'
+    expected: ['task["arg","arg2",true,false]', 'task', '"arg","arg2",true,false']
+  test:
+    shouldntMatch: ['', '[]:', ':']
+    shouldMatch: ['task', 'task:task', 'task1["test"]:task[true,true]:task']
 
 patterns.comment.single.test =
   exec:
