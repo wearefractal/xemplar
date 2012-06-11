@@ -6,9 +6,4 @@ module.exports =
   
   lfi: /\.\.\//i
   
-  sql: 
-    meta: /((\%3D)|(=))[^\n]*((\%27)|(\')|(\-\-)|(\%3B)|(;))/i
-    simple: /\w*((\%27)|(\'))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/i
-    union: /((\%27)|(\'))union/i
-    mssql: /exec(\s|\+)+(s|x)p\w+/i
-    unionselect: /UNION(?:\s+ALL)?\s+SELECT/i
+  sql: /(((\%3D)|(=))[^\n]*((\%27)|(\')|(\-\-)|(\%3B)|(;)))|(\w*((\%27)|(\'))((\%6F)|o|(\%4F))((\%72)|r|(\%52)))|(((\%27)|(\'))union)|(exec(\s|\+)+(s|x)p\w+)|(UNION(?:\s+ALL)?\s+SELECT)/i
