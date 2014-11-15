@@ -22,6 +22,84 @@
 var patterns = require('xemplar');
 ```
 
+```js
+var patterns = require('xemplar');
+var actual = 'some text with words';
+var regexp = patterns.text.words;
+
+console.log(actual.match(regexp));
+console.log(regexp.exec(actual));
+```
+
+
+## Patterns so far
+
+#### {Object} text
+- **{RegExp}** `words`
+- **{RegExp}** `nonblank`
+- **{RegExp}** `trim`
+- **{RegExp}** `ltrim`
+- **{RegExp}** `rtrim`
+
+#### {Object} number
+- **{RegExp}** `percent`
+- **{RegExp}** `all`
+- **{RegExp}** `negative`
+- **{RegExp}** `positive`
+
+#### {Object} information
+- **{RegExp}** `email`
+- **{RegExp}** `phone`
+- **{RegExp}** `credit_card`
+- **{RegExp}** `zip_code`
+
+#### {Object} time
+- **{RegExp}** `gmt`
+- **{RegExp}** `military`
+- **{RegExp}** `standard`
+- **{RegExp}** `date`
+- **{RegExp}** `date_time`
+- **{RegExp}** `month`
+
+#### {Object} technology
+- **{Object}** `frequency`
+  + **{RegExp}** `all`
+  + **{RegExp}** `thz`
+  + **{RegExp}** `ghz`
+  + **{RegExp}** `mhz`
+  + **{RegExp}** `khz`
+  + **{RegExp}** `hz`
+- **{Object}** `size`
+  + **{RegExp}** `all`
+  + **{RegExp}** `tb`
+  + **{RegExp}** `gb`
+  + **{RegExp}** `mb`
+  + **{RegExp}** `kb`
+  + **{RegExp}** `b`
+
+#### {Object} security
+- **{Object}** `xss`
+  + **{RegExp}** `simple`
+  + **{RegExp}** `img`
+  + **{RegExp}** `paranoid`
+- **{RegExp}** `lfi`
+- **{RegExp}** `sql`
+
+#### {Object} currency
+- **{RegExp}** `dollars`
+
+#### {Object} code
+- **{RegExp}** `cli`
+- **{Object}** `comment`
+  + **{RegExp}** `single`
+  + **{RegExp}** `block`
+- **{Object}** `color`
+  + **{RegExp}** `hex`
+  + **{RegExp}** `rgb`
+
+
+
+
 ## LICENSE
 
 (MIT License)
