@@ -1,7 +1,7 @@
 {
   "name": "xemplar",
   "description": "Community collection of RegEx patterns",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "homepage": "http://github.com/wearefractal/xemplar",
   "repository": "git://github.com/wearefractal/xemplar.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
